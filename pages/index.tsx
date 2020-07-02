@@ -10,25 +10,37 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Drive for <a href="http://www.meccatrucking.com">Mecca Trucking</a>
-        </h1>
+      <header>
+        <div className={styles.blueTop}>
+          <img
+            src="/logo.png"
+            alt="Mecca and Sons Trucking Logo"
+            className={styles.logo}
+          />
+          <h1 className={styles.title}>
+            Drive for{" "}
+            <a href="http://www.meccatrucking.com" className={styles.blueTopA}>
+              Mecca Trucking
+            </a>
+          </h1>
+        </div>
+      </header>
 
+      <main className={styles.main}>
         <p className={styles.description}>
-          Get started by filling out the short form below
+          Applications open soon...stay tuned. 🚛
         </p>
 
-        <div className={styles.grid}>
+        {/* <div className={styles.grid}>
           <input type="text" placeholder="Full name"></input>
           <input type="email" placeholder="Email address"></input>
           <input type="phone" placeholder="Phone number"></input>
-        </div>
+        </div> */}
       </main>
 
-      <Link href="/apply">
+      {/* <Link href="/apply">
         <a className={styles.card}>Complete Application</a>
-      </Link>
+      </Link> */}
 
       {/* <footer className={styles.footer}>
         <a
