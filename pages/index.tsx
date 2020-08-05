@@ -27,6 +27,11 @@ export default function Home() {
     <div className={styles.container}>
       <Head>
         <title>Drive for Mecca Trucking</title>
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=AW-988542989"
+        />
+        <script src="./dataLayer.js" />
       </Head>
 
       <header>

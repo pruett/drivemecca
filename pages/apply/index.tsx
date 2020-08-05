@@ -20,6 +20,7 @@ export default function Apply() {
         <title>
           {query.name}, thanks for applying to drive for Mecca Trucking!
         </title>
+        <script src="./event.js" />
       </Head>
 
       <main className={styles.main}>
