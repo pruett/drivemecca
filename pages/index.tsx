@@ -11,6 +11,7 @@ interface FormValues {
   valid_cdl: string | undefined;
   valid_twic: string | undefined;
   two_plus_yoe: string | undefined;
+  tos: boolean;
 }
 
 export default function Home() {
@@ -21,17 +22,13 @@ export default function Home() {
     valid_cdl: undefined,
     valid_twic: undefined,
     two_plus_yoe: undefined,
+    tos: false,
   };
 
   return (
     <div className={styles.container}>
       <Head>
         <title>Drive for Mecca Trucking</title>
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=AW-988542989"
-        />
-        <script src="./dataLayer.js" />
       </Head>
 
       <header>
@@ -57,6 +54,7 @@ export default function Home() {
               pathname: "/apply",
               query: { ...values },
             });
+            return;
           }}
         >
           <Form>
@@ -114,6 +112,13 @@ export default function Home() {
                 <option value="Yes">Yes</option>
                 <option value="No">No</option>
               </Field>
+            </div>
+
+            <div className={styles.botTrap}>
+              <label htmlFor="tos">
+                <Field type="checkbox" name="tos" />I agree to the terms of
+                service
+              </label>
             </div>
 
             <FormSubmit />

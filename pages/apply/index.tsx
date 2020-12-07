@@ -11,6 +11,14 @@ export default function Apply() {
   useEffect(() => {
     if (Object.entries(query).length === 0) return;
 
+    if (query.tos === 'true') {
+      console.warn('Bot detected!')
+      fetch(
+        `${sheetsMacroUrl}?name=BOT_DETECTED&email=-&phone=-&valid_cdl=-&valid_twic=-&two_plus_yoe=-`
+      );
+      return;
+    }
+
     fetch(`${sheetsMacroUrl}${window.location.search}`);
   }, [query]);
 
