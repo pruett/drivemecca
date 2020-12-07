@@ -10,7 +10,11 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=AW-988542989"
+          />
+          <script src="./dataLayer.js" />
         </Head>
 
         <body>
